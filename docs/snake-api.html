@@ -18,7 +18,13 @@
     </style> 
   </head>
   <body>
-    <redoc spec-url='https://raw.githubusercontent.com/battlesnakeio/docs/master/apis/snake/spec.yaml'></redoc>
+        <div id="theredoc"></div>
     <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script> 
+    <script>
+        Redoc.init(
+            'https://raw.githubusercontent.com/battlesnakeio/docs/master/apis/snake/spec.yaml', 
+            { hideLoading: true, disableSearch: true, hideDownloadButton: true }, 
+            document.getElementById('theredoc'));
+</script>
   </body>
 </html>
